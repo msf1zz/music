@@ -103,21 +103,6 @@ export function Welcome({
   return (
     <div className="tab-pane">
       <div>
-        <h2>welcome</h2>
-        <p className="note">
-          browser live coding synthesizer. write javascript to sequence patterns and modulate synth parameters in real time.
-        </p>
-      </div>
-
-      <div>
-        <h2>quick start</h2>
-        <p className="note">1. edit code in the editor</p>
-        <p className="note">2. press ctrl enter to evaluate and start audio</p>
-        <p className="note">3. space toggles the sequencer, ctrl . stops audio</p>
-        <p className="note">4. tweak parameters live in the options tab</p>
-      </div>
-
-      <div>
         <h2>examples</h2>
         <div className="example-list">
           {presets.map((preset) => (
