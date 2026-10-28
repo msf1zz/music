@@ -1,0 +1,99 @@
+.seq .bar {
+  display: flex;
+  gap: 8px;
+}
+
+.seq .alt {
+  background: var(--surface-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.seq .alt.pick {
+  background: var(--text);
+  color: var(--background);
+  border-color: var(--text);
+}
+
+.roll {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.names {
+  display: grid;
+  gap: 2px;
+}
+
+.names span {
+  height: 18px;
+  line-height: 18px;
+  font-size: 11px;
+  font-family: "Source Code Pro", monospace;
+  color: var(--meta);
+  text-align: right;
+  padding-right: 4px;
+}
+
+.cols {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(18px, 1fr);
+  gap: 3px;
+  overflow-x: auto;
+}
+
+.col {
+  display: grid;
+  gap: 2px;
+  padding: 2px;
+}
+
+.col.hot {
+  background: #242424;
+  outline: 1px solid #444444;
+}
+
+.seq .cell {
+  height: 18px;
+  padding: 0;
+  border-radius: 2px;
+  background: #202020;
+  border: 1px solid #2b2b2b;
+  cursor: pointer;
+}
+
+.seq .cell.dark {
+  background: #171717;
+  border-color: #222222;
+}
+
+.seq .cell.pick {
+  background: #e0e0e0;
+  border-color: #ffffff;
+}
+
+.seq .col.hot .cell.pick {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.seq .cell:focus-visible {
+  outline: 2px solid #888888;
+  outline-offset: 1px;
+}
+
+.num {
+  height: 14px;
+  text-align: center;
+  font-size: 10px;
+  font-family: "Source Code Pro", monospace;
+  color: var(--meta);
+}
+
+.col.hot .num {
+  color: var(--text);
+  font-weight: 700;
+}
